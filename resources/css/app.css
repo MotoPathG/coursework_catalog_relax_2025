@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.place_list{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.place_item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    background-color: #6c757d;
+    border-color: #000000;
+    border-radius: 30px;
+    border-style: inherit;
+    border-width: 3px;
+    width: 45%;
+}
+.place_item img{
+    width: 100%;
+    height: 200px;
+    border-radius: 30px 0px 0px 0px;
+
+}
+.place_item_up{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.place_item_down{
+    display: flex;
+    flex-direction: column;
+}
+
+.place_show
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.place_show img
+{
+    width: 100%;
+    height: 300px;
+    border-radius: 30px 30px 0px 0px;
+}

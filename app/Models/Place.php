@@ -51,4 +51,16 @@ class Place extends Model
             //'password' => 'hashed',
         ];
     }
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
+    public function types()
+    {
+        return $this->belongsToMany(PlaceType::class, 'place_type_relation', 'place_id', 'type_id');
+    }
+    public function amenities()
+    {
+        return $this->belongsToMany(Amenities::class, 'place_amenities', 'place_id', 'amenity_id');
+    }
 }

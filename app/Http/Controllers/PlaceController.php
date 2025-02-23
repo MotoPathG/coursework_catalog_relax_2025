@@ -15,7 +15,9 @@ class PlaceController extends Controller
         $places = Place::All();
         foreach($places as $value)
         {
-            $value->type;
+            $value->types;
+            $value->amenities;
+            $value->images;
         }
         return view('place.list', [
             'places' => $places,
@@ -43,7 +45,16 @@ class PlaceController extends Controller
      */
     public function show(string $id)
     {
-        //
+        
+        $place = Place::find($id);
+       
+        $place->types;
+        $place->amenities;
+        $place->images;
+        
+        return view('place.show', [
+            'place' => $place,
+        ]);
     }
 
     /**
