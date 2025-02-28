@@ -12,7 +12,7 @@ class Image extends Model
      * @var list<string>
      */
     protected $fillable = [
-        'url',
+        'image_url',
         'alt_text',
         'place_id',
         'is_main',
